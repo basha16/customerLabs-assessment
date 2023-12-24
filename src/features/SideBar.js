@@ -81,8 +81,8 @@ const SideBar = () => {
     }
     return (
         <div>
-            <div class="mx-auto p-5">
-                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Save segment</button>
+            <div class="mx-auto p-5 ms-5">
+                <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Save segment</button>
             </div>
 
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -111,7 +111,7 @@ const SideBar = () => {
                 </div>
 
                 <nav class="navbar navColorFooter">
-                    <div class="offcanvas-footer p-2">
+                    <div class="offcanvas-footer p-2 ms-3">
                         <button className="btn btn-success me-2" onClick={handleSubmit} disabled={isSubmitting}>
                             {isSubmitting ? <span className='indicator-progress d-block'>
                                 Loading ...
