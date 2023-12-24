@@ -1,1 +1,0 @@
-# customerLabs-assessment
