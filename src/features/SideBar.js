@@ -82,7 +82,7 @@ const SideBar = () => {
     return (
         <div>
             <div class="mx-auto p-5">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Save segment</button>
+                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Save segment</button>
             </div>
 
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -110,17 +110,19 @@ const SideBar = () => {
                     />
                 </div>
 
-                <div class="offcanvas-footer p-2">
-                    <button className="btn btn-success me-2" onClick={handleSubmit} disabled={isSubmitting}>
-                        {isSubmitting ? <span className='indicator-progress d-block'>
-                            Loading ...
-                            <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
-                        </span> : <span> Save the segment</span>}
-                    </button>
-                    <button className="btn btn-light" data-bs-dismiss="offcanvas" aria-label="Close">
-                        <span className='text-danger fw-semibold'>Cancel</span>
-                    </button>
-                </div>
+                <nav class="navbar navColorFooter">
+                    <div class="offcanvas-footer p-2">
+                        <button className="btn btn-success me-2" onClick={handleSubmit} disabled={isSubmitting}>
+                            {isSubmitting ? <span className='indicator-progress d-block'>
+                                Loading ...
+                                <span className='spinner-border spinner-border-sm align-middle ms-2'></span>
+                            </span> : <span> Save the segment</span>}
+                        </button>
+                        <button className="btn btn-light" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <span className='text-danger fw-semibold'>Cancel</span>
+                        </button>
+                    </div>
+                </nav>
             </div>
         </div>
     )
